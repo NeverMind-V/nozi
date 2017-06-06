@@ -1,0 +1,1 @@
+Folder for icon images. This images compiled on to `sprite.png` file on `img/` folder.
