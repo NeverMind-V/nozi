@@ -1,0 +1,45 @@
+//----------------------------------------------------//
+// FONTS                                              //
+//----------------------------------------------------//
+
+/*ARIAL FAMILY*/
+
+@font-face {
+  font-family: $main_font;
+  src: url("../fonts/ArialRegular/ArialRegular.eot");
+  src: url("../fonts/ArialRegular/ArialRegular.eot?#iefix")format("embedded-opentype"),
+  url("../fonts/ArialRegular/ArialRegular.woff") format("woff"),
+  url("../fonts/ArialRegular/ArialRegular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: $main_font;
+  src: url("../fonts/ArialBold/ArialBold.eot");
+  src: url("../fonts/ArialBold/ArialBold.eot?#iefix")format("embedded-opentype"),
+  url("../fonts/ArialBold/ArialBold.woff") format("woff"),
+  url("../fonts/ArialBold/ArialBold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: $main_font;
+  src: url("../fonts/ArialItalic/ArialItalic.eot");
+  src: url("../fonts/ArialItalic/ArialItalic.eot?#iefix")format("embedded-opentype"),
+  url("../fonts/ArialItalic/ArialItalic.woff") format("woff"),
+  url("../fonts/ArialItalic/ArialItalic.ttf") format("truetype");
+  font-style: italic;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: $main_font;
+  src: url("../fonts/ArialBlack/ArialBlack.eot");
+  src: url("../fonts/ArialBlack/ArialBlack.eot?#iefix")format("embedded-opentype"),
+  url("../fonts/ArialBlack/ArialBlack.woff") format("woff"),
+  url("../fonts/ArialBlack/ArialBlack.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 900;
+}
