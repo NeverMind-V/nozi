@@ -17,7 +17,7 @@ var svgSprite      = require('gulp-svg-sprite');
 // Static Server + watching scss/html files
 gulp.task('serve', ['sass-dev', 'sprite'], function() {
 	// Create symlink for css, js, img, images, lib folders
-	vfs.src(['css','js','img','images','lib'], {followSymlinks: false})
+	vfs.src(['css','js','img','images','lib', 'fonts'], {followSymlinks: false})
 		.pipe(vfs.symlink('./dist'));
 
 	browserSync.init({
