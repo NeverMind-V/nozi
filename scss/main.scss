@@ -1,11 +1,12 @@
-@import 'sprite.scss',
-'normalize&reset.scss',
-'variables.scss',
-'fonts.scss',
-'mixins&includes.scss',
-'typography.scss',
-'forms.scss',
-'layout.scss';
+@import 'sprite',
+'normalize&reset',
+'bootstrap/bootstrap-grid',
+'variables',
+'fonts',
+'mixins&includes',
+'typography',
+'forms',
+'layout';
 
 //----------------------------------------------------//
 // MAIN 						 				      //

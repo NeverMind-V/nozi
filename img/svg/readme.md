@@ -1,0 +1,1 @@
+Icons svg (will added to svg sprite)

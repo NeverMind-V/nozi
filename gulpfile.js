@@ -12,6 +12,7 @@ var injectPartials = require('gulp-inject-partials');
 var gulpCopy       = require('gulp-copy');
 var del            = require('del');
 var vfs            = require('vinyl-fs');
+var svgSprite      = require('gulp-svg-sprite');
 
 // Static Server + watching scss/html files
 gulp.task('serve', ['sass-dev', 'sprite'], function() {
@@ -23,11 +24,11 @@ gulp.task('serve', ['sass-dev', 'sprite'], function() {
 		server: "dist/"
 	});
 
-	gulp.watch("scss/*/**", ['bs-reload']);
+	gulp.watch("scss/**/**", ['bs-reload']);
 	gulp.watch("img/icons/*", ['bs-reload']);
 	gulp.watch("*.html", ['bs-reload']);
 	gulp.watch("*.tpl", ['bs-reload']);
-	gulp.watch("js/*/**", ['bs-reload']);
+	gulp.watch("js/**/**", ['bs-reload']);
 });
 
 // Compile sass into CSS & auto-inject into browsers
@@ -73,6 +74,20 @@ gulp.task('sprite', function () {
 
 	// Return a merged stream to handle both `end` events
 	return merge(imgStream, cssStream);
+});
+
+/*SVG*/
+gulp.task('sprite:svg', function() {
+    gulp.src('img/svg/**/*.svg')
+        .pipe(svgSprite({
+			mode: {
+				view: {
+					bust: false
+				},
+				symbol: true
+			}
+    	}))
+        .pipe(gulp.dest('img/svg-sprite/'));
 });
 
 gulp.task('dist', ['sprite', 'sass-dev'], function() {

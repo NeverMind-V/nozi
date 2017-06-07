@@ -23,10 +23,10 @@ input[type="search"],
 textarea,
 select,
 .input {
-  background-color: $form_bg;
+  background-color: #fff;
   border: 1px solid #fff;
   color: #fff;
-  font-size: $form_font_size;
+  font-size: $main_font_size;
   line-height: $main_line_height;
   padding: 12px 17px;
   width: 100%;
@@ -36,9 +36,8 @@ select,
   border-radius: 0;
   @include placeholderColor(#eee);
   &:focus {
-    border-color: $form_bg;
+    border-color: $black;
     box-shadow: 0 0 3px $red;
-    background-color: $form_bg;
   }
   &.error {
   }
@@ -79,18 +78,14 @@ select {
   display: block;
   @include clearSelect;
   transition: none;
-  background-color: $form_bg;
   &:focus{
-    background-color: $form_bg;
+
   }
 }
 
 option{
   background-color: $black;
   color: #fff;
-  &:hover{
-    background-color: $red;
-  }
 }
 
 .ui-front {
@@ -226,7 +221,7 @@ input[type="checkbox"] {
       content: '';
       width: 16px;
       height: 16px;
-      background: $form_bg;
+      background: #fff;
       left: 0;
       top: 50%;
       margin-top: -8px;
@@ -280,7 +275,7 @@ input[type="radio"] {
       content: '';
       width: 16px;
       height: 16px;
-      background: $form_bg;
+      background: #fff;
       left: 0;
       top: 50%;
       margin-top: -8px;
@@ -329,7 +324,7 @@ input[type="radio"] {
     padding: 5px 35px 13px;
     .ui-datepicker-prev, .ui-datepicker-next {
       position: absolute;
-      font-family: 'mymobstr-pt';
+      font-family: $main_font;
       top: 14px;
       color: #9B9B9B;
       font-size: 24px;

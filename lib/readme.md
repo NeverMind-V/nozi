@@ -1,1 +1,1 @@
-This folder containe external libs
+This folder contain external libs
