@@ -13,6 +13,7 @@
     "browser-sync": "^2.18.2",
     "del": "^2.2.2",
     "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
     "gulp-clean-css": "^2.0.13",
     "gulp-copy": "0.0.2",
     "gulp-csso": "^2.0.0",

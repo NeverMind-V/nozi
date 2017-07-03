@@ -39,6 +39,10 @@ gulp.task('sass-dev', function() {
 		.pipe(sass({
 			errLogToConsole: true
 		}).on('error', sass.logError))
+		.pipe(autoprefixer({
+			cascade: 'false',
+			browsers: ['last 100 version'],
+		}))
 		.pipe(sourcemaps.write())
 		.pipe(gulp.dest("css"));
 });
