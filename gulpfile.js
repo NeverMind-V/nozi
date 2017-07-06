@@ -13,6 +13,7 @@ var gulpCopy       = require('gulp-copy');
 var del            = require('del');
 var vfs            = require('vinyl-fs');
 var svgSprite      = require('gulp-svg-sprite');
+var autoprefixer   = require('gulp-autoprefixer');
 
 // Static Server + watching scss/html files
 gulp.task('serve', ['sass-dev', 'sprite'], function() {
