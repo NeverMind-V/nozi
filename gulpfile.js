@@ -16,7 +16,7 @@ var svgSprite      = require('gulp-svg-sprite');
 var autoprefixer   = require('gulp-autoprefixer');
 
 // Static Server + watching scss/html files
-gulp.task('serve', ['sass-dev', 'sprite'], function() {
+gulp.task('serve', ['sass-dev', 'sprite', 'sprite:svg'], function() {
 	// Create symlink for css, js, img, images, lib folders
 	vfs.src(['css','js','img','images','lib', 'fonts'], {followSymlinks: false})
 		.pipe(vfs.symlink('./dist'));
@@ -30,6 +30,14 @@ gulp.task('serve', ['sass-dev', 'sprite'], function() {
 	gulp.watch("*.html", ['bs-reload']);
 	gulp.watch("*.tpl", ['bs-reload']);
 	gulp.watch("js/**/**", ['bs-reload']);
+});
+
+// Static Server + watching scss files
+gulp.task('serve:backend', ['sass-dev', 'sprite', 'sprite:svg'], function() {
+
+    gulp.watch("scss/**/**", ['sass-dev']);
+    gulp.watch("img/icons/*", ['sass-dev']);
+    gulp.watch("js/**/**", ['sass-dev']);
 });
 
 // Compile sass into CSS & auto-inject into browsers
@@ -108,3 +116,4 @@ gulp.task('bs-reload', ['dist'], function () {
 
 gulp.task('default', ['dist', 'serve']);
 gulp.task('pro', ['sass', 'sprite']);
+gulp.task('backend', ['serve:backend']);
