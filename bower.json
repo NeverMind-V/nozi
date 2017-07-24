@@ -1,0 +1,23 @@
+{
+  "name": "opencart-starter-kit",
+  "description": "",
+  "main": "index.html",
+  "authors": [
+    "ABWEB"
+  ],
+  "license": "ISC",
+  "homepage": "http://localhost",
+  "ignore": [
+    "node_modules",
+    "bower_components",
+    "lib/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize-css": "^7.0.0",
+    "jQuery": "^3.2.1",
+    "font-awesome": "fontawesome#^4.7.0",
+    "inputmask": "^3.3.7"
+  }
+}
