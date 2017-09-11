@@ -18,6 +18,7 @@
     "gulp-copy": "0.0.2",
     "gulp-csso": "^2.0.0",
     "gulp-imagemin": "^3.1.1",
+    "gulp-inject-file": "^0.0.19",
     "gulp-inject-partials": "^1.0.2",
     "gulp-sass": "^2.3.2",
     "gulp-sourcemaps": "^1.9.1",

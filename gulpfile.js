@@ -14,9 +14,11 @@ var del            = require('del');
 var vfs            = require('vinyl-fs');
 var svgSprite      = require('gulp-svg-sprite');
 var autoprefixer   = require('gulp-autoprefixer');
+var fs             = require("fs");
+var replace        = require('gulp-replace');
 
 // Static Server + watching scss/html files
-gulp.task('serve', ['sass-dev', 'sprite', 'sprite:svg'], function() {
+gulp.task('serve', ['sass-dev', 'sprite', 'inject_svg:dev'], function() {
 	// Create symlink for css, js, img, images, lib folders
 	vfs.src(['css','js','img','images','lib', 'fonts'], {followSymlinks: false})
 		.pipe(vfs.symlink('./dist'));
@@ -29,6 +31,7 @@ gulp.task('serve', ['sass-dev', 'sprite', 'sprite:svg'], function() {
 	gulp.watch("img/icons/*", ['bs-reload']);
 	gulp.watch("*.html", ['bs-reload']);
 	gulp.watch("*.tpl", ['bs-reload']);
+    gulp.watch("img/svg/**/**", ['sass-dev', 'inject_svg:dev']);
 	gulp.watch("js/**/**", ['bs-reload']);
 });
 
@@ -101,6 +104,26 @@ gulp.task('sprite:svg', function() {
 			}
     	}))
         .pipe(gulp.dest('img/svg-sprite/'));
+});
+
+gulp.task('inject_svg:dev', ['sass-dev', 'sprite:svg'], function () {
+    var svg_file = fs.readFileSync("img/svg-sprite/symbol/svg/sprite.symbol.svg", "utf8");
+    var re = /<svg.*<\/svg>/i;
+    var svg = svg_file.match(re);
+
+    gulp.src('header.tpl')
+        .pipe(replace(/<svg.*><\/svg>/g, svg))
+        .pipe(gulp.dest('template/common'));
+});
+
+gulp.task('inject_svg', ['sass-dev', 'sprite:svg'], function () {
+    var svg_file = fs.readFileSync("img/svg-sprite/symbol/svg/sprite.symbol.svg", "utf8");
+    var re = /<svg.*<\/svg>/i;
+    var svg = svg_file.match(re);
+
+    gulp.src('template/common/header.tpl')
+        .pipe(replace(/<svg.*><\/svg>/g, svg))
+        .pipe(gulp.dest('template/common'));
 });
 
 gulp.task('dist', ['sprite', 'sass-dev'], function() {
