@@ -107,23 +107,31 @@ gulp.task('sprite:svg', function() {
 });
 
 gulp.task('inject_svg:dev', ['sass-dev', 'sprite:svg'], function () {
-    var svg_file = fs.readFileSync("img/svg-sprite/symbol/svg/sprite.symbol.svg", "utf8");
-    var re = /<svg.*<\/svg>/i;
-    var svg = svg_file.match(re);
+    try{
+        var svg_file = fs.readFileSync("img/svg-sprite/symbol/svg/sprite.symbol.svg", "utf8");
+        var re = /<svg.*<\/svg>/i;
+        var svg = svg_file.match(re);
 
-    gulp.src('header.tpl')
-        .pipe(replace(/<svg.*><\/svg>/g, svg))
-        .pipe(gulp.dest('template/common'));
+        gulp.src('footer.tpl')
+            .pipe(replace(/<!-- SVG SPRITE -->(\s|\S)*<!-- end SVG SPRITE -->/g, '<!-- SVG SPRITE -->' +  svg + '.*<!-- end SVG SPRITE -->'))
+            .pipe(gulp.dest('./'));
+	}catch (err){
+        console.log('no SVG sprite detected');
+	}
 });
 
 gulp.task('inject_svg', ['sass-dev', 'sprite:svg'], function () {
-    var svg_file = fs.readFileSync("img/svg-sprite/symbol/svg/sprite.symbol.svg", "utf8");
-    var re = /<svg.*<\/svg>/i;
-    var svg = svg_file.match(re);
+    try{
+        var svg_file = fs.readFileSync("img/svg-sprite/symbol/svg/sprite.symbol.svg", "utf8");
+        var re = /<svg.*<\/svg>/i;
+        var svg = svg_file.match(re);
 
-    gulp.src('template/common/header.tpl')
-        .pipe(replace(/<svg.*><\/svg>/g, svg))
-        .pipe(gulp.dest('template/common'));
+        gulp.src('template/common/footer.tpl')
+            .pipe(replace(/<!-- SVG SPRITE -->(\s|\S)*<!-- end SVG SPRITE -->/g, '<!-- SVG SPRITE -->' +  svg + '.*<!-- end SVG SPRITE -->'))
+            .pipe(gulp.dest('template/common'));
+	}catch (err){
+    	console.log('no SVG sprite detected');
+	}
 });
 
 gulp.task('dist', ['sprite', 'sass-dev'], function() {
