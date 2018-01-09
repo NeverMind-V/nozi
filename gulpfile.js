@@ -16,6 +16,7 @@ var svgSprite      = require('gulp-svg-sprite');
 var autoprefixer   = require('gulp-autoprefixer');
 var fs             = require("fs");
 var replace        = require('gulp-replace');
+var gcmq           = require('gulp-group-css-media-queries');
 
 // Static Server + watching scss/html files
 gulp.task('serve', ['sass-dev', 'sprite', 'inject_svg:dev'], function() {
@@ -64,6 +65,7 @@ gulp.task('sass', function() {
 		.pipe(sass({
 			style: 'compressed'
 		}))
+        .pipe(gcmq())
 		.pipe(cleanCSS({compatibility: 'ie8'}))
 		.pipe(gulp.dest("css"));
 });
