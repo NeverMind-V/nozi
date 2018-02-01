@@ -19,7 +19,11 @@ var autoprefixer   = require('gulp-autoprefixer');
 gulp.task('serve', ['sass-dev', 'sprite', 'sprite:svg'], function() {
 	// Create symlink for css, js, img, images, lib folders
 	vfs.src(['css','js','img','images','lib', 'fonts'], {followSymlinks: false})
+		//  in case you re using windows
+		//  delete it and install linux or
+		//  replace next row with       .pipe(vfs.symlink('./dist'));
 		.pipe(vfs.symlink('./dist', {relativeSymlinks: true}));
+
 
 	browserSync.init({
 		server: "dist/"
