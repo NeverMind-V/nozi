@@ -1,0 +1,11 @@
+{
+  "name": "opencart-starter-kit",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "abweb-team"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "private": true
+}

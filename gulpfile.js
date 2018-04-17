@@ -118,6 +118,12 @@ gulp.task('bs-reload', ['dist'], function () {
     browserSync.reload();
 });
 
+// Copy compiled files to dist before upload on remote server
+// Runed on bitbucket pipeline
+gulp.task('prod', ['dist', 'pro'], function() {
+  gulp.src(['css/**/*','js/**/*','img/**/*','images/**/*','lib/**/*', 'fonts/**/*'], {base: './'}).pipe(gulp.dest('./dist'));
+});
+
 gulp.task('default', ['dist', 'serve']);
 gulp.task('pro', ['sass', 'sprite']);
 gulp.task('backend', ['serve:backend']);
