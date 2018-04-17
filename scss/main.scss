@@ -1,6 +1,7 @@
 @import 'sprite',
-'normalize&reset',
+'../lib/normalize-css/normalize.css',
 'bootstrap/bootstrap-grid',
+'../lib/font-awesome/scss/font-awesome',
 'variables',
 'fonts',
 'mixins&includes',
@@ -20,7 +21,20 @@
 
 /*LISTS and TYPICAL ELEMENTS*/
 
+//default opencart pagination
+.pagination{
+  li{
+    .active{
 
+    }
+  }
+  a{
+
+  }
+  span{
+
+  }
+}
 
 /*end LISTS and TYPICAL ELEMENTS*/
 
