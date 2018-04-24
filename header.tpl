@@ -5,7 +5,28 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-		<title></title>
+    <meta name="description" content="Описание сайта содержит не более 150 символов">
+    <title></title>
+
+    <!-- Facebook Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://example.com/page.html">
+    <meta property="og:title" content="Content Title">
+    <meta property="og:image" content="https://example.com/image.jpg">
+    <meta property="og:description" content="Description Here">
+    <meta property="og:site_name" content="Site Name">
+    <meta property="og:locale" content="en_US">
+    <!-- Facebook Open Graph END-->
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@site_account">
+    <meta name="twitter:creator" content="@individual_account">
+    <meta name="twitter:url" content="https://example.com/page.html">
+    <meta name="twitter:title" content="Content Title">
+    <meta name="twitter:description" content="Описание контента короче 200 символов">
+    <meta name="twitter:image" content="https://example.com/image.jpg">
+    <!-- Twitter Card END -->
 
 		<!-- Css styles -->
 		<!--<link href="css/sprite.css" rel="stylesheet">-->
