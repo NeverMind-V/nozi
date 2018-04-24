@@ -28,6 +28,10 @@
     <meta name="twitter:image" content="https://example.com/image.jpg">
     <!-- Twitter Card END -->
 
+    <!--theme color -->
+    <meta name="theme-color" content="#ffffff">
+    <!--theme color END-->
+
 		<!-- Css styles -->
 		<!--<link href="css/sprite.css" rel="stylesheet">-->
 		<link href="css/main.css" rel="stylesheet">
