@@ -141,7 +141,7 @@ gulp.task('inject_svg', ['sass-dev', 'sprite:svg'], function () {
 });
 
 gulp.task('dist', ['sprite', 'sass-dev'], function() {
-	return gulp.src('*.html')
+	return gulp.src(['*.html', '!product-microdata.html'])
 		.pipe(injectPartials())
 		.pipe(gulp.dest('dist/'));
 });
