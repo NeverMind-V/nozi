@@ -1,55 +1,125 @@
 <!-- partial:header.tpl -->
 <!-- partial -->
-    <div class="breadcrumb__wrapper">
+    
+    <div class="background d-flex flex-column justify-content-center">
         <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="breadcrumb">
-                        <ul class="breadcrumbs__list"
-                            itemscope="itemscope"
-                            itemtype="https://schema.org/BreadcrumbList">
-                            <li itemprop="itemListElement" itemscope
-                                itemtype="http://schema.org/ListItem">
-                                <a itemscope itemtype="http://schema.org/Thing"
-                                   itemprop="item" href="#">
-                                    <span itemprop="name">Home</span>
-                                </a>
-                                <meta itemprop="position" content="1" />
-                            </li>
-                            >
-                            <li itemprop="itemListElement" itemscope
-                                itemtype="http://schema.org/ListItem">
-                                <a itemscope itemtype="http://schema.org/Thing"
-                                   itemprop="item" href="#">
-                                    <span itemprop="name">Category</span>
-                                </a>
-                                <meta itemprop="position" content="2" />
-                            </li>
-                            >
-                            <li itemprop="itemListElement" itemscope
-                                itemtype="http://schema.org/ListItem">
-                                <span itemprop="name">Product</span>
-                                <meta itemprop="position" content="3" />
-                            </li>
-                        </ul>
+            <div class="character__wrapper">
+                <div class="character">
+                    <div class="character__body">
+                        <img src="img/svg/joe.svg" alt="">
+                    </div>
+                    <div class="character__element-wrapper">
+                        <div class="coin">
+                            <svg>
+                                <use xlink:href="#coin"></use>
+                            </svg>
+                        </div>
+                        <div class="coin">
+                            <svg>
+                                <use xlink:href="#coin"></use>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="character__ground">
+                        <svg>
+                            <use xlink:href="#groundblock"></use>
+                        </svg>
+                    </div>
+                </div>
+                <div class="character--2">
+                    <div class="character__body">
+                        <img src="img/svg/lively.svg" alt="">
+                    </div>
+                    <div class="character__element-wrapper">
+                        <div class="heart">
+                            <img src="img/svg/heart.svg" alt="">
+                        </div>
+                        <div class="heart">
+                            <img src="img/svg/heart.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="character__ground">
+                        <svg>
+                            <use xlink:href="#groundblock"></use>
+                        </svg>
+                    </div>
+                </div>
+                <div class="character--3">
+                    <div class="character__body">
+                        <img src="img/svg/cat.svg" alt="">
+                    </div>
+                    <div class="character__element-wrapper">
+                        <div class="heart">
+                            <img src="img/svg/heart.svg" alt="">
+                        </div>
+                        <div class="heart">
+                            <img src="img/svg/heart.svg" alt="">
+                        </div>
+                        <div class="heart">
+                            <img src="img/svg/heart.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="character__ground">
+                        <svg>
+                            <use xlink:href="#groundblock"></use>
+                        </svg>
+                    </div>
+                </div>
+                <div class="character--4">
+                    <div class="character__body">
+                        <img src="img/svg/mriyka.svg" alt="">
+                    </div>
+                    <div class="character__element-wrapper">
+                        <div class="heart">
+                            <img src="img/svg/heart.svg" alt="">
+                        </div>
+                        <div class="heart">
+                            <img src="img/svg/heart.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="character__ground">
+                        <svg>
+                            <use xlink:href="#groundblock"></use>
+                        </svg>
+                    </div>
+                </div>
+                <div class="character--5">
+                    <div class="character__body">
+                        <img src="img/svg/joe.svg" alt="">
+                    </div>
+                    <div class="character__element-wrapper">
+                        <div class="coin">
+                            <svg>
+                                <use xlink:href="#coin"></use>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="character__ground">
+                        <svg>
+                            <use xlink:href="#groundblock"></use>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div> 
+        <div class="sound__wrapper">
+            <div class="container">
+                <div class="row justify-content-end">
+                    <div class="col-1 d-flex justify-content-end align-items-center">
+                        <audio controls autoplay loop class="audio" id="audio-block" volume="1.0">
+                            <source src="../img/mario.mp3" type="audio/ogg">
+                        </audio>
+                        <div class="sound js-sound active">
+                            <svg>
+                                <use xlink:href="#music"></use>
+                            </svg>
+                        </div>             
                     </div>
                 </div>
             </div>
         </div>
+        <div class="background__ground"></div>           
     </div>
-    <main class="main">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <h1>OpenCart theme starter kit</h1>
-                    <!-- SVG example -->
-                    <svg>
-                        <use xlink:href="img/svg-sprite/symbol/svg/sprite.symbol.svg#youtube"></use>
-                    </svg>
-                </div>
-            </div>
-        </div>
-    </main>
 
 <!-- partial:footer.tpl -->
 <!-- partial -->

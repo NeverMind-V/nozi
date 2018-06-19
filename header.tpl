@@ -62,3 +62,72 @@
     experience.</p>
 <![endif]-->
 <div class="fixcontent">
+    <header class="header">
+        <div class="container">
+            <div class="row ">
+                <div class="col-12 d-flex align-items-center justify-content-between">
+                    <div class="logo">
+                        <a href="#!"><img src="img/svg/logo.svg" alt="logo"></a>
+                    </div>
+                    <nav class="d-flex align-items-center header__nav">
+                        <div class="cloud--1">
+                            <a href="#!" class="active">О нас</a>
+                            <svg class="cloud__background">
+                                <use xlink:href="#cloud_1"></use>
+                            </svg>
+                        </div>
+                        <div class="cloud--2">
+                            <a href="#!">Раскрась героя</a>
+                            <svg class="cloud__background">
+                                <use xlink:href="#cloud_2"></use>
+                            </svg>
+                        </div>
+                        <div class="cloud--3">
+                            <a href="#!">Каталог</a>
+                            <svg class="cloud__background">
+                                <use xlink:href="#cloud_3"></use>
+                            </svg>
+                        </div>
+                        <div class="cloud--4">
+                            <a href="#!">Для мамочек</a>
+                            <svg class="cloud__background">
+                                <use xlink:href="#cloud_4"></use>
+                            </svg>
+                        </div>
+                        <div class="cloud--5">
+                            <a href="#!">Контакты</a>
+                            <svg class="cloud__background">
+                                <use xlink:href="#cloud_5"></use>
+                            </svg>
+                        </div>
+                        <div class="cloud--6">
+                            <div class="lang__wrapper js-lang">
+                                <div class="lang__current">Рус</div>          
+                                <ul class="lang__list">
+                                    <li class="lang__list-item"><a href="#!">Рус</a></li>
+                                    <li class="lang__list-item"><a href="#!">Укр</a></li>
+                                    <li class="lang__list-item"><a href="#!">Eng</a></li>
+                                </ul>              
+                            </div>                    
+                            <div class="social__wrapper">
+                                <div class="social__icon"> 
+                                    <a href="#!">
+                                        <img src="img/svg/facebook.svg" alt=""> 
+                                    </a>                       
+                                </div>
+                                <div class="social__icon">
+                                    <a href="#!">
+                                        <img src="img/svg/instagram.svg" alt="">
+                                    </a>                                    
+                                </div>
+                            </div>
+                            <svg class="cloud__background">
+                                <use xlink:href="#cloud_6"></use>
+                            </svg>
+                        </div> 
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    

@@ -4,8 +4,40 @@ function phoneMask() {
     }
 }
 
+function languageToggle() {
+	$('.js-lang').on('click',function(){
+		$('.js-lang .lang__list').slideToggle('fast');
+	});
+}
+
+function characterAnimate() {	
+	$('.character__body').on('click',function(e) {		
+	  e.preventDefault();
+	  var person = $(this);
+	  $(this).addClass('jump');
+	  setTimeout(function(){
+	    person.removeClass('jump');
+	  },600);
+	});
+}
+function audioControl() {
+	var audio = document.getElementById('audio-block');	
+	$('.js-sound').on('click',function(){
+		$('.arst2').fadeToggle();
+		if(audio.paused == false) {
+			audio.pause();
+		}
+		else {
+			audio.play();
+		}
+	});
+}
+
 jQuery(document).ready(function($) {
     phoneMask();
+    languageToggle();
+    characterAnimate();
+    audioControl();
 });
 
 jQuery(window).resize(function (){
