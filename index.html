@@ -3,101 +3,231 @@
     
     <div class="background d-flex flex-column justify-content-center">
         <div class="container">
-            <div class="character__wrapper">
-                <div class="character">
-                    <div class="character__body">
-                        <img draggable="false" src="img/svg/joe.svg" alt="">
+
+            <div class="character__block-wrapper d-flex d-md-none">
+                <div class="character__left js-character-left">
+                    <div class="character__arrow"></div>
+                </div>
+                <div class="character__block-inner">
+                    <div class="js-character-slider js-md-state">
+                        <div class="character__item-wrapper">
+                            <div class="character__item">
+                                <div class="character__body">
+                                    <img draggable="false" src="img/svg/joe.svg" alt="">
+                                </div>
+                                <div class="character__element-wrapper">
+                                    <div class="coin">
+                                        <svg>
+                                            <use xlink:href="#coin"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="coin">
+                                        <svg>
+                                            <use xlink:href="#coin"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="character__ground">
+                                    <svg>
+                                        <use xlink:href="#groundblock"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="character__item-wrapper">
+                            <div class="character__item--2">
+                                <div class="character__body">
+                                    <img draggable="false" src="img/svg/lively.svg" alt="">
+                                </div>
+                                <div class="character__element-wrapper">
+                                    <div class="heart">
+                                        <img draggable="false" src="img/svg/heart.svg" alt="">
+                                    </div>
+                                    <div class="heart">
+                                        <img draggable="false" src="img/svg/heart.svg" alt="">
+                                    </div>
+                                </div>
+                                <div class="character__ground">
+                                    <svg>
+                                        <use xlink:href="#groundblock"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="character__item-wrapper">
+                            <div class="character__item--3">
+                                <div class="character__body">
+                                    <img draggable="false" src="img/svg/cat.svg" alt="">
+                                </div>
+                                <div class="character__element-wrapper">
+                                    <div class="heart">
+                                        <img draggable="false" src="img/svg/heart.svg" alt="">
+                                    </div>
+                                    <div class="heart">
+                                        <img draggable="false" src="img/svg/heart.svg" alt="">
+                                    </div>
+                                    <div class="heart">
+                                        <img draggable="false" src="img/svg/heart.svg" alt="">
+                                    </div>
+                                </div>
+                                <div class="character__ground">
+                                    <svg>
+                                        <use xlink:href="#groundblock"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="character__item-wrapper">
+                            <div class="character__item--4">
+                                <div class="character__body">
+                                    <img draggable="false" src="img/svg/mriyka.svg" alt="">
+                                </div>
+                                <div class="character__element-wrapper">
+                                    <div class="heart">
+                                        <img draggable="false" src="img/svg/heart.svg" alt="">
+                                    </div>
+                                    <div class="heart">
+                                        <img draggable="false" src="img/svg/heart.svg" alt="">
+                                    </div>
+                                </div>
+                                <div class="character__ground">
+                                    <svg>
+                                        <use xlink:href="#groundblock"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="character__item-wrapper">
+                            <div class="character__item--5">
+                                <div class="character__body">
+                                    <img draggable="false" src="img/svg/joe.svg" alt="">
+                                </div>
+                                <div class="character__element-wrapper">
+                                    <div class="coin">
+                                        <svg>
+                                            <use xlink:href="#coin"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="character__ground">
+                                    <svg>
+                                        <use xlink:href="#groundblock"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="character__element-wrapper">
-                        <div class="coin">
+                </div>                
+                <div class="character__right js-character-right">
+                    <div class="character__arrow"></div>
+                </div>
+            </div>
+            
+            <div class="character__block-wrapper js-lg-state d-none d-md-flex">
+                <div class="character__item-wrapper">
+                    <div class="character__item">
+                        <div class="character__body">
+                            <img draggable="false" src="img/svg/joe.svg" alt="">
+                        </div>
+                        <div class="character__element-wrapper">
+                            <div class="coin">
+                                <svg>
+                                    <use xlink:href="#coin"></use>
+                                </svg>
+                            </div>
+                            <div class="coin">
+                                <svg>
+                                    <use xlink:href="#coin"></use>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="character__ground">
                             <svg>
-                                <use xlink:href="#coin"></use>
+                                <use xlink:href="#groundblock"></use>
                             </svg>
                         </div>
-                        <div class="coin">
+                    </div>
+                </div>
+                <div class="character__item-wrapper">
+                    <div class="character__item--2">
+                        <div class="character__body">
+                            <img draggable="false" src="img/svg/lively.svg" alt="">
+                        </div>
+                        <div class="character__element-wrapper">
+                            <div class="heart">
+                                <img draggable="false" src="img/svg/heart.svg" alt="">
+                            </div>
+                            <div class="heart">
+                                <img draggable="false" src="img/svg/heart.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="character__ground">
                             <svg>
-                                <use xlink:href="#coin"></use>
+                                <use xlink:href="#groundblock"></use>
                             </svg>
                         </div>
                     </div>
-                    <div class="character__ground">
-                        <svg>
-                            <use xlink:href="#groundblock"></use>
-                        </svg>
-                    </div>
                 </div>
-                <div class="character--2">
-                    <div class="character__body">
-                        <img draggable="false" src="img/svg/lively.svg" alt="">
-                    </div>
-                    <div class="character__element-wrapper">
-                        <div class="heart">
-                            <img draggable="false" src="img/svg/heart.svg" alt="">
+                <div class="character__item-wrapper">
+                    <div class="character__item--3">
+                        <div class="character__body">
+                            <img draggable="false" src="img/svg/cat.svg" alt="">
                         </div>
-                        <div class="heart">
-                            <img draggable="false" src="img/svg/heart.svg" alt="">
+                        <div class="character__element-wrapper">
+                            <div class="heart">
+                                <img draggable="false" src="img/svg/heart.svg" alt="">
+                            </div>
+                            <div class="heart">
+                                <img draggable="false" src="img/svg/heart.svg" alt="">
+                            </div>
+                            <div class="heart">
+                                <img draggable="false" src="img/svg/heart.svg" alt="">
+                            </div>
                         </div>
-                    </div>
-                    <div class="character__ground">
-                        <svg>
-                            <use xlink:href="#groundblock"></use>
-                        </svg>
-                    </div>
-                </div>
-                <div class="character--3">
-                    <div class="character__body">
-                        <img draggable="false" src="img/svg/cat.svg" alt="">
-                    </div>
-                    <div class="character__element-wrapper">
-                        <div class="heart">
-                            <img draggable="false" src="img/svg/heart.svg" alt="">
-                        </div>
-                        <div class="heart">
-                            <img draggable="false" src="img/svg/heart.svg" alt="">
-                        </div>
-                        <div class="heart">
-                            <img draggable="false" src="img/svg/heart.svg" alt="">
-                        </div>
-                    </div>
-                    <div class="character__ground">
-                        <svg>
-                            <use xlink:href="#groundblock"></use>
-                        </svg>
-                    </div>
-                </div>
-                <div class="character--4">
-                    <div class="character__body">
-                        <img draggable="false" src="img/svg/mriyka.svg" alt="">
-                    </div>
-                    <div class="character__element-wrapper">
-                        <div class="heart">
-                            <img draggable="false" src="img/svg/heart.svg" alt="">
-                        </div>
-                        <div class="heart">
-                            <img draggable="false" src="img/svg/heart.svg" alt="">
-                        </div>
-                    </div>
-                    <div class="character__ground">
-                        <svg>
-                            <use xlink:href="#groundblock"></use>
-                        </svg>
-                    </div>
-                </div>
-                <div class="character--5">
-                    <div class="character__body">
-                        <img draggable="false" src="img/svg/joe.svg" alt="">
-                    </div>
-                    <div class="character__element-wrapper">
-                        <div class="coin">
+                        <div class="character__ground">
                             <svg>
-                                <use xlink:href="#coin"></use>
+                                <use xlink:href="#groundblock"></use>
                             </svg>
                         </div>
                     </div>
-                    <div class="character__ground">
-                        <svg>
-                            <use xlink:href="#groundblock"></use>
-                        </svg>
+                </div>
+                <div class="character__item-wrapper">
+                    <div class="character__item--4">
+                        <div class="character__body">
+                            <img draggable="false" src="img/svg/mriyka.svg" alt="">
+                        </div>
+                        <div class="character__element-wrapper">
+                            <div class="heart">
+                                <img draggable="false" src="img/svg/heart.svg" alt="">
+                            </div>
+                            <div class="heart">
+                                <img draggable="false" src="img/svg/heart.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="character__ground">
+                            <svg>
+                                <use xlink:href="#groundblock"></use>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="character__item-wrapper">
+                    <div class="character__item--5">
+                        <div class="character__body">
+                            <img draggable="false" src="img/svg/joe.svg" alt="">
+                        </div>
+                        <div class="character__element-wrapper">
+                            <div class="coin">
+                                <svg>
+                                    <use xlink:href="#coin"></use>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="character__ground">
+                            <svg>
+                                <use xlink:href="#groundblock"></use>
+                            </svg>
+                        </div>
                     </div>
                 </div>
             </div>

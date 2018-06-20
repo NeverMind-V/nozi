@@ -35,6 +35,7 @@
 		<!-- Css styles -->
 		<!--<link href="css/sprite.css" rel="stylesheet">-->
 		<link href="css/main.css" rel="stylesheet">
+        <link href="lib/slick-carousel/slick/slick.css" rel="stylesheet">
 
 		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->

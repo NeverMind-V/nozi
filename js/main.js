@@ -33,11 +33,28 @@ function audioControl() {
 		}
 	});
 }
+function characterSlider() {
+	$(".js-character-slider").slick({
+        dots: false,
+        infinite: true,
+        draggable: true,
+        speed: 300,
+        slidesToShow: 1,
+        slidesToScroll: 1,               
+        prevArrow: '.js-character-left',
+        nextArrow: '.js-character-right'
+        // responsive: [{
+        //     breakpoint: 769,
+        //     settings: "unslick"
+        //   }]
+    });    
+}
 
 jQuery(document).ready(function($) {
     phoneMask();
     languageToggle();
     characterAnimate();
+    characterSlider();
     audioControl();
 });
 

@@ -19,5 +19,8 @@
     "jquery": "^3.2.1",
     "font-awesome": "fontawesome#^4.7.0",
     "inputmask": "^3.3.7"
+  },
+  "devDependencies": {
+    "slick-carousel": "^1.8.1"
   }
 }
