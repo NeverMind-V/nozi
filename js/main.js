@@ -22,8 +22,9 @@ function characterAnimate() {
 }
 function audioControl() {
 	var audio = document.getElementById('audio-block');	
+	audio.volume = 0.1;
 	$('.js-sound').on('click',function(){
-		$('.arst2').fadeToggle();
+		$('.asst2').fadeToggle();
 		if(audio.paused == false) {
 			audio.pause();
 		}

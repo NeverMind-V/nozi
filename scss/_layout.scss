@@ -32,6 +32,12 @@ body {
   top:0;
   left:0;
   width:100%;
+  @include media-breakpoint-down(lg) {
+    .container {
+      max-width:100%;
+    }
+  }
+  
   &__main{
     display: flex;
     width: 100%;

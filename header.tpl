@@ -64,11 +64,13 @@
 <div class="fixcontent">
     <header class="header">
         <div class="container">
-            <div class="row ">
-                <div class="col-12 d-flex align-items-center justify-content-between">
+            <div class="row align-items-center justify-content-between">
+                <div class="col-2">
                     <div class="logo">
                         <a href="#!"><img src="img/svg/logo.svg" alt="logo"></a>
                     </div>
+                </div>
+                <div class="col-10">
                     <nav class="d-flex align-items-center header__nav">
                         <div class="cloud--1">
                             <a href="#!" class="active">О нас</a>
