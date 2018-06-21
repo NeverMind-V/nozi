@@ -21,6 +21,9 @@
     "inputmask": "^3.3.7"
   },
   "devDependencies": {
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "css-hamburgers": "^0.9.3",
+    "wow": "wowjs#^1.1.2",
+    "animate.css": "^3.5.2"
   }
 }

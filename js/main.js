@@ -23,6 +23,19 @@ function characterAnimate() {
 function audioControl() {
 	var audio = document.getElementById('audio-block');	
 	audio.volume = 0.1;
+
+	if (window.matchMedia('(max-width: 768px)').matches) {
+        audio.pause();
+    }
+
+    $(window).resize(function () {
+        if (window.matchMedia('(max-width: 768px)').matches) {
+            audio.pause();
+        } else {
+            audio.play();
+        }
+    });
+
 	$('.js-sound').on('click',function(){
 		$('.asst2').fadeToggle();
 		if(audio.paused == false) {
@@ -49,6 +62,54 @@ function characterSlider() {
         //   }]
     });    
 }
+function hamburger() {
+	$('.js-menu').on('click',function() {
+		$(this).parent().toggleClass('is-active');
+		$('.js-character-block').fadeToggle(300);
+		if($(this).parent().hasClass('is-active')) {
+			$('.js-dropdown>li').removeClass('bounceOutUp').addClass('animated bounceInDown');
+		}
+		else {
+			$('.js-dropdown>li').removeClass('bounceInDown').addClass('animated bounceOutUp');
+		}
+		
+		setTimeout(function(){
+			// $('.js-background').toggleClass('menu-active');
+		},600);
+		setTimeout(function(){
+	 		// $('.header__mob-dropdown').toggleClass('d-none');
+		},800);
+		
+		
+	});
+}
+function wowInit() {
+    var wow = new WOW({
+        boxClass: 'wow',      // animated element css class (default is wow)
+        animateClass: 'animated', // animation css class (default is animated)
+        offset: 100,          // distance to the element when triggering the animation (default is 0)
+        mobile: true,       // trigger animations on mobile devices (default is true)
+        live: true,       // act on asynchronously loaded content (default is true)
+        callback: function (box) {
+            /*$(box).siblings('.heading__excerpt').textillate({
+               loop: true,
+               type: 'char',
+               in: {
+                  effect: 'flash',
+                  shuffle: true,
+               },
+               // out animation settings.
+               out: {
+                  effect: '',
+
+               },
+
+            })*/
+        },
+        scrollContainer: null // optional scroll container selector, otherwise use window
+    });
+    wow.init();
+}
 
 jQuery(document).ready(function($) {
     phoneMask();
@@ -56,6 +117,8 @@ jQuery(document).ready(function($) {
     characterAnimate();
     characterSlider();
     audioControl();
+    hamburger();
+    wowInit();
 });
 
 jQuery(window).resize(function (){

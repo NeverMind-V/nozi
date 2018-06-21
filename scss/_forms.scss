@@ -210,6 +210,37 @@ button,
   }
 }
 
+// Hamburger
+//----------------------------------------------------//
+
+$hamburger-padding-x                       : 0px;
+$hamburger-padding-y                       : 0px;
+$hamburger-layer-width                     : 45px;
+$hamburger-layer-height                    : 6px;
+$hamburger-layer-spacing                   : 2px;
+$hamburger-layer-border-radius             : 6px;
+
+.hamburger {
+  position:relative;
+  width:auto!important;
+  z-index:20;  
+  &-inner {
+    background-color:$hamburger-bottom!important;
+    &:after {
+      background-color:$hamburger-top!important;
+    }
+    &:before {
+      background-color: $hamburger-middle!important;
+    }
+  }
+  &:hover,&:active,&:focus,&:visited {
+    border-color:transparent!important;
+    outline:none!important;
+    color:transparent!important;
+    background:transparent!important;
+  }
+}
+
 // Checkbox
 //----------------------------------------------------//
 input[type="checkbox"] {

@@ -34,8 +34,11 @@
 
 		<!-- Css styles -->
 		<!--<link href="css/sprite.css" rel="stylesheet">-->
-		<link href="css/main.css" rel="stylesheet">
         <link href="lib/slick-carousel/slick/slick.css" rel="stylesheet">
+        <link href="lib/animate.css/animate.min.css" rel="stylesheet">
+		<link href="css/main.css" rel="stylesheet">
+        
+        
 
 		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -63,7 +66,7 @@
     experience.</p>
 <![endif]-->
 <div class="fixcontent">
-    <header class="header">
+    <header class="header d-md-block d-none">
         <div class="container">
             <div class="row align-items-center justify-content-between">
                 <div class="col-2">
@@ -71,7 +74,7 @@
                         <a href="#!"><img src="img/svg/logo.svg" alt="logo"></a>
                     </div>
                 </div>
-                <div class="col-10">
+                <div class="col-10">                    
                     <nav class="d-flex align-items-center header__nav">
                         <div class="cloud--1">
                             <a href="#!" class="active">О нас</a>
@@ -133,4 +136,83 @@
             </div>
         </div>
     </header>
+    <header class="header__mob d-block d-md-none">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="logo">
+                            <a href="#!"><img src="img/svg/logo.svg" alt="logo"></a>
+                        </div>
+                        <div class="cloud--lang">
+                            <ul class="cloud__list">
+                                <li><a href="#!" class="active">Рус</a></li>
+                                <li><a href="#!">Укр</a></li>
+                                <li><a href="#!">Eng</a></li>
+                            </ul>
+                            <svg class="cloud__background">
+                                <use xlink:href="#cloud_6"></use>
+                            </svg>
+                        </div>
+                        <nav class="">                        
+                            <div class="cloud--menu">
+                                <button class="hamburger hamburger--elastic " type="button">
+                                    <span class="hamburger-box js-menu">
+                                        <span class="hamburger-inner"></span>
+                                    </span>
+                                </button>
+                                <svg class="cloud__background">
+                                    <use xlink:href="#cloud_1"></use>
+                                </svg>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>                
+    </header>
+    <div class="header__mob-dropdown d-md-none">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div>
+                            <nav>
+                                <ul class="header__mob-menu js-dropdown">
+                                    <li class="cloud--1 " data-wow-delay="0.4s">
+                                        <a href="#!">О нас</a>
+                                        <svg class="cloud__background">
+                                            <use xlink:href="#cloud_1"></use>
+                                        </svg>
+                                    </li>
+                                    <li class="cloud--2 " data-wow-delay="0.3s">
+                                        <a href="#!">Раскрась Героя</a>
+                                        <svg class="cloud__background">
+                                            <use xlink:href="#cloud_1"></use>
+                                        </svg>
+                                    </li>
+                                    <li class="cloud--3 " data-wow-delay="0.2s">
+                                        <a href="#!">Каталог</a>
+                                        <svg class="cloud__background">
+                                            <use xlink:href="#cloud_1"></use>
+                                        </svg>
+                                    </li>
+                                    <li class="cloud--4 " data-wow-delay="0.1s">
+                                        <a href="#!">Для мамочек</a>
+                                        <svg class="cloud__background">
+                                            <use xlink:href="#cloud_1"></use>
+                                        </svg>
+                                    </li>
+                                    <li class="cloud--5 " data-wow-delay="0">
+                                        <a href="#!">Контакты</a>
+                                        <svg class="cloud__background">
+                                            <use xlink:href="#cloud_1"></use>
+                                        </svg>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     

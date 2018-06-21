@@ -7,6 +7,7 @@
 'mixins&includes',
 'typography',
 'forms',
+'../lib/css-hamburgers/_sass/hamburgers/hamburgers',
 'layout';
 
 //----------------------------------------------------//
@@ -58,6 +59,40 @@
 		width:100%;
 		height:100%;
 	}
+	&__list {
+		display:flex;
+		list-style-type: none;
+		margin:0;
+		padding:0;
+		li {
+			padding:0 12px;
+			position:relative;
+			&:after {
+				position:absolute;
+				display:block;
+				content:'';
+				background-color:$font-primary;
+				width:2px;
+				height:100%;
+				right:0;
+				top:0;
+				z-index:10;
+			}
+			&:first-child {
+				padding-left:0;
+			}
+			&:last-child {
+				padding-right:0;
+				&:after {
+					display:none;
+				}
+			}
+		}
+		a {
+			@include font-size(20px);
+			font-weight:800;
+		}
+	}
 	a {
 		position:relative;
 		z-index:10;
@@ -79,12 +114,14 @@
 		width:107px;
 		height:69px;
 		margin-left:13px;
+		animation-delay:0;
 	}
 	&--2 {
 		@extend .cloud;
 		width:153px;
 		height:79px;
 		margin-left:13px;
+		animation-delay:0.1s;
 
 	}
 	&--3 {
@@ -92,27 +129,43 @@
 		width:120px;
 		height:74px;
 		margin-left:15px;
+		animation-delay:0.2s;
 	}
 	&--4 {
 		@extend .cloud;
 		width:158px;
 		height:75px;
 		margin-left:15px;
+		animation-delay:0.3s;
 	}
 	&--5 {
 		@extend .cloud;
 		width:118px;
 		height:75px;
 		margin-left:15px;
+		animation-delay:0.4s;
 	}
 	&--6 {
 		@extend .cloud;
 		width:155px;
 		height:79px;
 		margin-left:50px;
+		animation-delay:0.5s;
 		a {
 			@include font-size(16px);
 		}
+	}
+	&--lang {
+		@extend .cloud;
+		width:227px;
+		height:124px;
+		margin-left:-100px;
+	}
+	&--menu {
+		@extend .cloud;
+		width:136px;
+		height:113px;
+		margin-right:-50px;		
 	}
 }
 
@@ -192,6 +245,13 @@
 	height:100vh;
 	user-select:none;
 	overflow:hidden;
+	&.menu-active {
+		
+			.background__ground,.background__grass,.background__stones,.background__trees-wrapper {
+				bottom:-700px!important;
+			}
+		
+	}
 	&__ground {
 		position:absolute;
 		z-index:2;
@@ -200,6 +260,7 @@
 		width:100%;
 		background:url('../img/svg/background__ground.svg') center center no-repeat;
 		background-size:cover;
+		transition:$main_animation;
 	}
 	&__grass {
 		position:absolute;
@@ -208,6 +269,7 @@
 		height:110px;
 		width:100%;
 		background:url('../img/svg/grass1.svg') center center no-repeat;
+		transition:$main_animation;
 	}
 	&__stones {
 		position:absolute;
@@ -216,6 +278,7 @@
 		width:100%;
 		z-index:4;
 		bottom:0;
+		transition:$main_animation;
 		.stone {
 			display: flex;
 			align-items:flex-end;
@@ -225,14 +288,20 @@
 				img {
 					width:160px;
 					height:46px;
-				}				
+				}	
+				@include media-breakpoint-down(sm) {
+					display:none!important;
+				}			
 			}	
 			&--2 {
 				@extend .stone;
 				img {
 					width:197px;
 					height:67px;
-				}				
+				}		
+				@include media-breakpoint-down(sm) {
+					margin-left:-8px;
+				}		
 			}
 			&--3 {
 				@extend .stone;
@@ -244,15 +313,34 @@
 						margin-left:-60px;
 						height:36px;
 					}				
-				}				
+				}	
+				@include media-breakpoint-down(sm) {
+					display:none!important;
+				}			
 			}
 			&--4 {
 				@extend .stone;
 				img {
 					width:174px;
 					height:92px;
+				}	
+				@include media-breakpoint-down(sm) {
+					display:none!important;
 				}				
-			}		
+			}	
+			&--5 {
+				@extend .stone;
+				display:none;
+
+				img {
+					width:165px;
+					height:72px;
+				}
+				@include media-breakpoint-down(sm) {
+					display:flex;
+					margin-right:-15px;
+				}
+			}	
 		}
 	}
 	&__trees {
@@ -265,6 +353,13 @@
 			width:100%;
 			bottom:0;
 			height:180px;
+			transition:$main_animation;
+			@include media-breakpoint-down(sm) {
+				.container {
+					max-width:100%;
+				}
+			}
+			
 		}
 		.tree {
 			position:absolute;
@@ -278,6 +373,9 @@
 					width:137px;
 					height:169px;
 				}
+				@include media-breakpoint-down(sm) {
+					display:none;
+				}
 			}
 			&--2 {
 				@extend .tree;
@@ -290,6 +388,9 @@
 					width:164px;
 					height:240px;
 				}
+				@include media-breakpoint-down(sm) {
+					display:none;
+				}
 			}
 			&--3 {
 				@extend .tree;
@@ -298,6 +399,13 @@
 				img {
 					width:91px;
 					height:135px;
+				}
+				@include media-breakpoint-down(sm) {
+					right:90px;
+					img {
+						width:210px!important;
+						height:308px!important;
+					}
 				}
 			}
 			&--4 {
@@ -308,6 +416,14 @@
 					width:148px;
 					height:205px;
 				}
+				@include media-breakpoint-down(sm) {
+					left:72px!important;
+					right:auto!important;
+					img {
+						width:128px!important;
+						height:178px!important;
+					}
+				}
 			}
 		}
 	}
@@ -317,6 +433,9 @@
 	width:23px;
 	height:26px;
 	cursor:pointer;
+	@include media-breakpoint-down(sm) {
+		display:none!important;
+	}
 	&__wrapper {
 		position:absolute;
 		bottom:50px;
@@ -340,6 +459,11 @@
 /* character block */
 
 .character {
+
+	@include media-breakpoint-down(sm) {
+		max-width:100%;
+	}
+	
 
 	&__item {
 		display:flex;
@@ -413,6 +537,9 @@
 				padding-top:100px;
 				padding-bottom:100px;
 			}
+			.slick-slide {
+				display:flex!important;
+			}
 		}
 	}
 	&__body {
@@ -432,12 +559,19 @@
 			width:100%;
 			height:100%;
 		}
+		@include media-breakpoint-down(sm) {
+			width:267px!important;
+			height:87px!important;
+		}
 	}
 	
 	&__element-wrapper {
 		position:absolute;
 		left:0;
 		bottom:52px;
+		@include media-breakpoint-down(sm) {
+			bottom:110px;
+		}
 		div {
 			&:not(:last-child) {
 				margin-bottom:4px;
@@ -504,12 +638,21 @@
 		width:100%;
 		height:100%;
 	}
+	@include media-breakpoint-down(sm) {
+		width:28px!important;
+		height:28px!important;
+	}
+
 }
 .heart {	
 	img {
 		width:17px;
 		height:14px;
 		display:block;
+		@include media-breakpoint-down(sm) {
+			width:34px!important;
+			height:28px!important;
+		}
 	}
 }
 
